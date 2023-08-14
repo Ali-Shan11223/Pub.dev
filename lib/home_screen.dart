@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:readmore/readmore.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -62,7 +63,19 @@ class HomeScreen extends StatelessWidget {
                   fieldWidth: 40,
                   borderRadius: BorderRadius.circular(10)),
             ),
-            
+            const SizedBox(
+              height: 20,
+            ),
+            DefaultTextStyle(
+                style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+                child: AnimatedTextKit(repeatForever: true, animatedTexts: [
+                  ScaleAnimatedText('Think'),
+                  ScaleAnimatedText('Build'),
+                  ScaleAnimatedText('Ship'),
+                ]))
           ],
         ),
       ),
