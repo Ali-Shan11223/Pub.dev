@@ -67,15 +67,26 @@ class HomeScreen extends StatelessWidget {
               height: 20,
             ),
             DefaultTextStyle(
+                // ignore: prefer_const_constructors
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
-                child: AnimatedTextKit(repeatForever: true, animatedTexts: [
-                  ScaleAnimatedText('Think'),
-                  ScaleAnimatedText('Build'),
-                  ScaleAnimatedText('Ship'),
-                ]))
+                child: AnimatedTextKit(
+                    stopPauseOnTap: true,
+                    repeatForever: true,
+                    animatedTexts: [
+                      // ScaleAnimatedText('Think'),
+                      // ScaleAnimatedText('Build'),
+                      // ScaleAnimatedText('Ship'),
+                      // RotateAnimatedText('AWESOME'),
+                      // FadeAnimatedText('Fade Animated Text'),
+                      // WavyAnimatedText('Wavy Animated Text'),
+                      // FlickerAnimatedText('Flicker Animated Text'),
+                      TypewriterAnimatedText('Discipline is the best tool',
+                          curve: Curves.decelerate,
+                          speed: Duration(milliseconds: 30))
+                    ]))
           ],
         ),
       ),
